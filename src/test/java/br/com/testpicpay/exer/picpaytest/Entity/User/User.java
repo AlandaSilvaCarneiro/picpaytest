@@ -1,7 +1,13 @@
-package br.com.testpicpay.exer.picpaytest.Entity;
+package br.com.testpicpay.exer.picpaytest.Entity.User;
+
+import java.math.BigDecimal;
+
+import org.springframework.context.annotation.Primary;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -36,6 +42,15 @@ public class User {
 
 
     private String password;
+
+
+    private BigDecimal balance;
+
+
+    @Enumerated(EnumType.STRING)
+    private UserType userType;
+
+    
 
     
 }
